@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE3074E8-C21F-4EED-A828-2AD28B810DD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>camerasearch</RootNamespace>
+    <AssemblyName>camerasearch</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\camerasearchAddUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\camerasearchAddUserControl.Designer.cs">
+      <DependentUpon>camerasearchAddUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\camerasearchHelpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\camerasearchHelpPage.Designer.cs">
+      <DependentUpon>camerasearchHelpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\camerasearchItemManager.cs" />
+    <Compile Include="Admin\camerasearchTabPlugin.cs" />
+    <Compile Include="Admin\camerasearchTabUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\camerasearchTabUserControl.Designer.cs">
+      <DependentUpon>camerasearchTabUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\camerasearchToolsOptionDialogPlugin.cs" />
+    <Compile Include="Admin\camerasearchToolsOptionDialogUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\camerasearchToolsOptionDialogUserControl.designer.cs">
+      <DependentUpon>camerasearchToolsOptionDialogUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\camerasearchUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\camerasearchUserControl.Designer.cs">
+      <DependentUpon>camerasearchUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Background\camerasearchBackgroundPlugin.cs" />
+    <Compile Include="Client\camerasearchPropertiesWpfUserControl.xaml.cs">
+      <DependentUpon>camerasearchPropertiesWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\camerasearchSettingsPanelPlugin.cs" />
+    <Compile Include="Client\camerasearchSettingsPanelControl.xaml.cs">
+      <DependentUpon>camerasearchSettingsPanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\camerasearchSidePanelPlugin.cs" />
+    <Compile Include="Client\camerasearchSidePanelWpfUserControl.xaml.cs">
+      <DependentUpon>camerasearchSidePanelWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\camerasearchViewItemPlugin.cs" />
+    <Compile Include="Client\camerasearchViewItemManager.cs" />
+    <Compile Include="Client\camerasearchViewItemToolbarPlugin.cs" />
+    <Compile Include="Client\camerasearchViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>camerasearchViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\camerasearchViewLayout.cs" />
+    <Compile Include="Client\camerasearchWorkSpacePlugin.cs" />
+    <Compile Include="Client\camerasearchWorkSpaceToolbarPlugin.cs" />
+    <Compile Include="Client\camerasearchWorkSpaceViewItemManager.cs" />
+    <Compile Include="Client\camerasearchWorkSpaceViewItemPlugin.cs" />
+    <Compile Include="Client\camerasearchWorkSpaceViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>camerasearchWorkSpaceViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="camerasearchDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\camerasearchAddUserControl.resx">
+      <DependentUpon>camerasearchAddUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\camerasearchTabUserControl.resx">
+      <DependentUpon>camerasearchTabUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\camerasearchToolsOptionDialogUserControl.resx">
+      <DependentUpon>camerasearchToolsOptionDialogUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\camerasearchHelpPage.resx">
+      <DependentUpon>camerasearchHelpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\camerasearchUserControl.resx">
+      <DependentUpon>camerasearchUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugin.def">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\DummyItem.bmp" />
+    <EmbeddedResource Include="Resources\WorkSpaceIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Client\camerasearchPropertiesWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\camerasearchSettingsPanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Client\camerasearchSidePanelWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\camerasearchViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\camerasearchWorkSpaceViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MilestoneSystems.VideoOS.Platform">
+      <Version>22.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Program Files\Milestone\MIPPlugins\search"
+xcopy /y "C:\Users\justi\source\repos\camerasearch\bin\Debug\camerasearch.pdb" "C:\Program Files\Milestone\MIPPlugins\search"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

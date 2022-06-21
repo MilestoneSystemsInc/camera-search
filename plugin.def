@@ -1,0 +1,4 @@
+<plugin>
+   <file name="camerasearch.dll"/>
+	<load env="Administration" />
+</plugin>
