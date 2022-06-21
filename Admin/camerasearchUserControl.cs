@@ -19,6 +19,7 @@ using VideoOS.Platform.Messaging;
 using VideoOS.Platform.Resources;
 using VideoOS.Platform.Util;
 using VideoOS.Platform.ConfigurationItems;
+using System.Windows.Threading;
 
 
 
@@ -36,7 +37,8 @@ namespace camerasearch.Admin
     {
         internal event EventHandler ConfigurationChangedByUser;
         DataTable dt = new DataTable();
-       
+        private DispatcherTimer _searchTimer = new DispatcherTimer();
+
 
         public camerasearchUserControl()
         {
@@ -44,8 +46,14 @@ namespace camerasearch.Admin
             backgroundWorker1.WorkerReportsProgress = true;
             backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
             backgroundWorker1.RunWorkerAsync(2000);
+            _searchTimer.Interval = TimeSpan.FromMilliseconds(200);
+            _searchTimer.Tick += OnSearchTimerTick;
         }
-
+        private void OnSearchTimerTick(object sender, EventArgs e)
+        {
+            _searchTimer.Stop();
+            search();
+        }
         internal String DisplayName
         {
             get { return ""; }
@@ -59,7 +67,8 @@ namespace camerasearch.Admin
         /// <param name="e"></param>
         internal void OnUserChange(object sender, EventArgs e)
         {
-            search();
+            _searchTimer.Stop();
+            _searchTimer.Start();
 
         }
 
