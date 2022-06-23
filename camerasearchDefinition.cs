@@ -70,7 +70,7 @@ namespace camerasearch
         /// </summary>
         static camerasearchDefinition()
         {
-            _treeNodeImage = Properties.Resources.myicon;
+            _treeNodeImage = Properties.Resources.mysearch;
             _topTreeNodeImage = Properties.Resources.myicon;
         }
 

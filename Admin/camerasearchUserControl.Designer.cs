@@ -100,8 +100,6 @@ namespace camerasearch.Admin
             // checkBoxDisabledDevices
             // 
             this.checkBoxDisabledDevices.AutoSize = true;
-            this.checkBoxDisabledDevices.Checked = true;
-            this.checkBoxDisabledDevices.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxDisabledDevices.Location = new System.Drawing.Point(493, 17);
             this.checkBoxDisabledDevices.Name = "checkBoxDisabledDevices";
             this.checkBoxDisabledDevices.Size = new System.Drawing.Size(147, 17);

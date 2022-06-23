@@ -118,6 +118,7 @@
     <Content Include="plugin.def">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\search.png" />
     <Resource Include="Resources\myicon.png" />
   </ItemGroup>
   <ItemGroup>

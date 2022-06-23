@@ -1,4 +1,4 @@
 <plugin>
-   <file name="camerasearch.dll"/>
+	<file name="Device Search.dll"/>
 	<load env="Administration" />
 </plugin>
