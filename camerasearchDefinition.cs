@@ -70,8 +70,8 @@ namespace camerasearch
         /// </summary>
         static camerasearchDefinition()
         {
-            _treeNodeImage = Properties.Resources.Server;
-            _topTreeNodeImage = Properties.Resources.Server;
+            _treeNodeImage = Properties.Resources.myicon;
+            _topTreeNodeImage = Properties.Resources.myicon;
         }
 
 

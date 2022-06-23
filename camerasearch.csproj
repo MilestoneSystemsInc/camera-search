@@ -94,12 +94,12 @@
       <DependentUpon>camerasearchUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="camerasearchDefinition.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="camerasearchDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin\camerasearchHelpPage.resx">
@@ -110,6 +110,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
@@ -117,9 +118,7 @@
     <Content Include="plugin.def">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\server.png" />
-    <EmbeddedResource Include="Resources\DummyItem.bmp" />
-    <EmbeddedResource Include="Resources\WorkSpaceIcon.bmp" />
+    <Resource Include="Resources\myicon.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MilestoneSystems.VideoOS.Platform">
