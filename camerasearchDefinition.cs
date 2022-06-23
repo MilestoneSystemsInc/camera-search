@@ -1,6 +1,4 @@
 using camerasearch.Admin;
-using camerasearch.Background;
-using camerasearch.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -61,7 +59,6 @@ namespace camerasearch
         private List<TabPlugin> _tabPlugins = new List<TabPlugin>();
         private List<ViewItemToolbarPlugin> _viewItemToolbarPlugins = new List<ViewItemToolbarPlugin>();
         private List<WorkSpaceToolbarPlugin> _workSpaceToolbarPlugins = new List<WorkSpaceToolbarPlugin>();
-        private List<ViewLayout> _viewLayouts = new List<ViewLayout> { new camerasearchViewLayout() };
         private List<ToolsOptionsDialogPlugin> _toolsOptionsDialogPlugins = new List<ToolsOptionsDialogPlugin>();
 
         #endregion
@@ -73,7 +70,7 @@ namespace camerasearch
         /// </summary>
         static camerasearchDefinition()
         {
-            _treeNodeImage = Properties.Resources.DummyItem;
+            _treeNodeImage = Properties.Resources.Server;
             _topTreeNodeImage = Properties.Resources.Server;
         }
 
@@ -113,13 +110,7 @@ namespace camerasearch
 
             if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.SmartClient)
             {
-                _workSpacePlugins.Add(new camerasearchWorkSpacePlugin());
-                _sidePanelPlugins.Add(new camerasearchSidePanelPlugin());
-                _viewItemPlugins.Add(new camerasearchViewItemPlugin());
-                _viewItemPlugins.Add(new camerasearchWorkSpaceViewItemPlugin());
-                _viewItemToolbarPlugins.Add(new camerasearchViewItemToolbarPlugin());
-                _workSpaceToolbarPlugins.Add(new camerasearchWorkSpaceToolbarPlugin());
-                _settingsPanelPlugins.Add(new camerasearchSettingsPanelPlugin());
+
             }
             if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.Administration)
             {
@@ -127,7 +118,6 @@ namespace camerasearch
                 //_toolsOptionsDialogPlugins.Add(new camerasearchToolsOptionDialogPlugin());
             }
 
-            _backgroundPlugins.Add(new camerasearchBackgroundPlugin());
         }
 
         /// <summary>
@@ -224,7 +214,7 @@ namespace camerasearch
         /// </summary>
         public override string Name
         {
-            get { return "camerasearch"; }
+            get { return "Camera Search"; }
         }
 
         /// <summary>
@@ -356,13 +346,6 @@ namespace camerasearch
             get { return _workSpaceToolbarPlugins; }
         }
 
-        /// <summary>
-        /// An extension plug-in running in the Smart Client to provide extra view layouts.
-        /// </summary>
-        public override List<ViewLayout> ViewLayouts
-        {
-            get { return _viewLayouts; }
-        }
 
         #endregion
 

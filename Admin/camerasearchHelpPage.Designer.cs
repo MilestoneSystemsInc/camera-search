@@ -41,6 +41,7 @@ namespace camerasearch.Admin
             this.textBox1.Size = new System.Drawing.Size(494, 373);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // HelpPage
             // 

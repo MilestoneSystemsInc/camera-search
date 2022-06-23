@@ -56,7 +56,7 @@ namespace camerasearch.Admin
         }
         internal String DisplayName
         {
-            get { return ""; }
+            get { return "Device Search"; }
             set {  }
         }
 
