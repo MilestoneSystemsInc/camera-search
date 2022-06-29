@@ -237,6 +237,7 @@ namespace camerasearch.Admin
                 SafeInvoke(button1, () => { button1.Enabled = true; });
                 SafeInvoke(dataGridView1, () => { dataGridView1.DataSource = dt; });
                 SafeInvoke(dataGridView1, () => { dataGridView1.Columns["ALL"].Visible = false; });
+                SafeInvoke(dataGridView1, () => { dataGridView1.RowHeadersVisible = false; });
                 SafeInvoke(dataGridView1, () => { dataGridView1.ResumeLayout(); });
                 SafeInvoke(button2, () => { button2.Enabled = true; });
                 SafeInvoke(textBoxSearch, () => { textBoxSearch.Enabled = true; });
